@@ -1,0 +1,111 @@
+
+/*HEADER*/
+#header-div{
+	margin-bottom: 20px;
+}
+.image-holder{
+	text-align: center;
+	margin:0 auto;
+}
+.image-holder img{
+	width: 40%;
+	-webkit-height: auto;
+	-moz-height: auto;
+}
+#true{
+	color: #5993E5;
+}
+/*ABOUT SECTION*/
+#about-section-div{
+	background-color: #262626;
+	color:white;
+	padding-top: 55px;
+	padding-bottom: 55px;
+}
+/*OUR MISSION SECTION*/
+#our-mission-h{
+	color:white;
+	margin-bottom: 30px;
+}
+#mission-text-div{
+	background-color: #262626;
+	padding-top:25px;
+}
+#mission-p{
+	font-size: 18px;
+	color:white;
+	text-align: center;
+}
+#mission-p-span{
+	font-size: 22px;
+	color:#5993E5;
+}
+/*OUR TEAM SECTION*/
+#dev-team-div{
+	padding-top:25px;
+}
+#our-team-h{
+	margin-bottom: 30px;
+}
+div.profile-pic-holder{
+	text-align: center;
+}
+img.profile-pic{
+	border-radius: 50%;
+	width: 50%;
+	-webkit-height: auto;
+	-moz-height:auto;
+	margin-bottom: 10px;
+}
+p.career-text{
+	color: #5993E5;
+}
+#join-btn-div{
+	text-align: center;
+	margin-bottom: 15px;
+	margin-top: 15px;
+}
+#positions-holder{
+	background-color: transparent;
+	padding-top: 25px;
+	padding-right: 25px;
+	margin-bottom: 25px;
+}
+.positions-card{
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	margin-bottom: 25px;
+	background-color: white;
+	border-radius: 75px;
+}
+.position-header{
+	color:black;
+	text-align: center;
+}
+.position-description{
+	font-size:20px;
+	color:black;
+}
+/*FOOTER*/
+#logo{
+	text-align: center;
+}
+#footer{
+	width: 100%;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	background-color: #262626;
+}
+.title{
+	color: #5993E5;
+}
+#footer p{
+	font-size:17px;
+}
+
+/*Z INDEXI*/
+/*FULL SCREEN DIV 99*/
+/*NAVBAR UVEK 100*/
+/*SLIDING MENU 101*/

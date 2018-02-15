@@ -1,0 +1,26 @@
+.main{
+	margin-top: 50px;
+}
+
+#logo-div{
+	text-align: center;
+}
+input{
+	color:black !important;
+	border-radius: 25px !important;
+}
+#form-div{
+	box-shadow: 0px 0px 10px black;
+	border-radius: 25px;
+	padding:20px 20px;
+}
+#submit-btn{
+	border-radius: 25px !important;
+	background-color: #5993E5;
+	color:white;
+}
+.a-link{
+	color: #5993E5;
+	font-size: 17px;
+	text-decoration: none;
+}

@@ -1,0 +1,149 @@
+/*general controls*/
+button:hover{
+	cursor: pointer;
+}
+body{
+	margin:0;
+	margin-top: 150px;
+}
+select{
+	color:black !important;
+	border-radius: 25px !important;
+}
+textarea{
+	color:black !important;
+	border-radius: 25px !important;
+}
+input{
+	color:black !important;
+	border-radius: 25px !important;
+}
+/*hr colors*/
+.hr-white{
+	background-color:white;
+}
+.hr-black{
+	background-color: rgba(38,38,38,0.5);
+}
+/*text colors*/
+.text-red{
+	color:#E5343A !important;
+}
+.text-red:hover{
+	background-color: white !important;
+}
+.text-white{
+	color: white;
+}
+.text-black{
+	color: #262626;
+}
+.text-blue{
+	color: #5993E5;
+}
+.text-green{
+	color: #59E57D;
+}
+.text-grey{
+	color: grey;
+}
+/*default link*/
+.a-link{
+	color: #5993E5;
+	font-size: 17px;
+	text-decoration: none;
+}
+/*background colors*/
+.background-white{
+	background-color: white;
+}
+.background-blue{
+	background-color: #5993E5;
+}
+.background-black{
+	background-color: #262626;
+}
+/*for centering the logo inside a div*/
+#logo-div{
+	text-align: center;
+}
+/*fot centering a button inside a div*/
+#button-center-div{
+	text-align: center;
+}
+/*main is a main container for every page when logged in*/
+#main{
+	margin-bottom: 50px;
+	border-radius: 50px;
+	padding:30px;
+	width:90%;
+	position: absolute;
+	left: 5%;
+	box-shadow: 0px 0px 10px #262626;
+}
+/*fb share btn*/
+.fb-share-button{
+	display: inline;
+}
+.twitter-share-button{
+	display: inline;
+}
+#share-buttons-div{
+	width: 100%;
+	text-align: center;
+}
+/*FULLSCREEN DIV*/
+#open-div-btn{
+	color:white;
+	background-color: #5993E5;
+	font-size: 20px;
+	border-radius: 50px;
+	border:none;
+	padding:20px;
+	transition: background-color, 1s;
+}
+#open-div-btn:hover{
+	cursor: pointer;
+	background-color: #4286E5;
+}
+#fullscreen-div{
+	overflow-y: auto;
+	display: none;
+	position: fixed;
+	z-index: 99;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7);
+	padding-top: 100px;
+	transition: display, 1s;
+}
+#div-close{
+	font-size: 30px;
+	color:white;
+}
+#div-close:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+/*SCROLLBAR JUST FOR CHROME*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

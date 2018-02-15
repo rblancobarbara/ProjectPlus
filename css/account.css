@@ -1,0 +1,19 @@
+button{
+	color:white;
+	background-color: #5993E5;
+	font-size: 20px;
+	border-radius: 50px;
+	border:none;
+	padding:20px;
+	transition: background-color, 1s;
+}
+button:hover{
+	cursor: pointer;
+	background-color: #4286E5;
+}
+#button-div{
+	text-align: center;
+}
+input{
+	margin-bottom: 25px;
+}

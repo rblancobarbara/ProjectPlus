@@ -1,0 +1,86 @@
+/*project cards*/
+.project_card{
+	margin-top: 25px;
+	margin-bottom: 25px;
+	box-shadow: 0px 0px 10px #262626;
+	padding: 25px 25px;
+	border-radius: 25px;
+}
+.card-header{
+	padding: 0;
+	text-align: right;
+	background-color: white;
+	border:none;
+}
+.carousel-item img{
+	width: 100%;
+	-webkit-height: 30%;
+	-moz-height:30%;
+}
+#description-div{
+	overflow-x: auto;
+	word-break: all;
+	max-width: 100%;
+	max-height: 140px;
+	-moz-max-height:140px;
+}
+#price{
+	font-size: 25px;
+}
+#likes{
+	font-size: 20px;
+}
+@media screen and (max-width: 768px){
+	.carousel.slide{
+		margin-bottom: 25px;
+	}
+}
+/*DROPDOWN MENU*/
+/* Dropdown Button */
+p.drop-p{
+	cursor: pointer;
+}
+.dropbtn {
+    border:none;
+	border-radius: 25px;
+	padding: 15px;
+	color:white;
+	background-color: #5993E5;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
