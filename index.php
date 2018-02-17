@@ -108,7 +108,7 @@
 						<p class = " career-text">Web developer and designer</p>
 					</div>
 					<div class = "col-md-8">
-						<p align="center">ovo je robajac</p>
+						<p align="center">This is our main web developer and designer! (more description to come, this is just a placeholder)</p>
 					</div>
 				</div>
 				<hr class = "hr-black">
@@ -117,10 +117,10 @@
 						<img class = "profile-pic" src = "website_pictures/matija.png">
 						<p>Matija Vukajlovic</p>
 						<address>Age 17, lives in Nis</address>
-						<p class = " career-text">Designer</p>
+						<p class = " career-text">Advisor</p>
 					</div>
 					<dic class = "col-md-8 profile-pic-holder">
-						<p align = "center">ovo je matija</p>
+						<p align = "center">This is our picture advisor! (more description to come, this is just a placeholder)</p>
 					</dic>
 				</div>	
 			</div>
