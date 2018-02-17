@@ -56,6 +56,7 @@ class Project{
 					  <p align = "right" onclick="OpenDropdown(' . $this->id . ')" class="text-blue drop-p">Options...</p>
 					  <div id="myDropdown' . $this->id . '" class="dropdown-content">
 					    <a href="generate_share_link.php?id=' . $this->id . '">Share</a>
+					    <a href="edit_project.php?id=' . $this->id . '">Edit</a>
 					    <a href="delete_project.php?id=' . $this->id . '">Delete</a>
 					    <a href="change_privacy.php?set=Private&id=' . $this->id . '">Set private</a>
 					    <a href="change_privacy.php?set=Public&id=' . $this->id . '">Set public</a>
