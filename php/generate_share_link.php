@@ -23,6 +23,7 @@ else{
 		<!-- JAVASCRIPT -->
 		<script src = "../js/twitter_for_website.js"></script>
 		<script src = "../js/facebook_sdk.js"></script>
+		<script src = "../js/go_back_browser.js"></script>
 		<!-- CSS -->
 		<link rel = "stylesheet" href = "../css/general.css">
 		<!-- FONTS -->
@@ -43,6 +44,8 @@ else{
 				  data-size="large">
 				Tweet</a>
 			</div>
+			<hr class = "hr-black">
+			<p id = "go_back_history" align="center">Go back</p>
 		</div>
 	</body>
 </html>

@@ -75,7 +75,7 @@ else{
 		
 		<div class = "container" id = "edit-div">
 			<hr class = "hr-black">
-			<form action = "submit_project.php" method = "POST" enctype="multipart/form-data" name="formUploadFile">
+			<form action = "edit_project_backend.php" method = "POST" enctype="multipart/form-data" name="formUploadFile">
 				<input name="name" type = "text" placeholder="Project name" class = "form-control" value = "<?php echo $title ?>"><br>
 				<textarea name="description" class =  "form-control" placeholder="Project description" rows="7"><?php echo $description ?></textarea><br>
 				<input name="price" type = "number" min = 1 placeholder="Min. project price" class = "form-control" value = "<?php echo $price ?>"><br>
@@ -93,22 +93,25 @@ else{
 				<!-- holds the currently uploaded pictures -->
 				<div class = "container" id = "pictures-holder">
 					<?php
-						$counter = 1;
-						for ($i=0; $i < count($picture_urls); $i++){
-						echo("<div class = 'row'>");
-						while($counter <= 3 || $i < count($picture_urls) ){
-							echo("<div class = 'col-md-4' id = 'old-pic-div'>
-								<img id = 'old-pic-img' class = 'd-block img-fluid' src = '../" . $picture_urls[$i] . "'>
-								<div id = 'over-img-div'>
-									<a href = 'delete_image.php?pic_id=" . $picture_ids[$i] . "' id = 'del-pic-a' align = 'center' class = 'text-white'>DELETE &#9747;</a>
-								</div>
-							</div>");
-							$i++;
+						$pic_num = count($picture_urls);
+						$rows_num = ceil($pic_num/3);
+						$counter = 0;
+						for ($i=0; $i < $rows_num ; $i++) { 
+							echo("<div class = 'row pic_row'>");
+							$curr = 0;
+							while($curr < 3 && $counter < count($picture_urls)){
+								echo("<div class = 'col-md-4' id = 'old-pic-div'>
+										<img id = 'old-pic-img' class = 'd-block img-fluid' src = '../" . $picture_urls[$counter] . "'>
+										<div id = 'over-img-div'>
+											<a href = 'delete_image.php?pic_id=" . $picture_ids[$counter] . "' id = 'del-pic-a' align = 'center' class = 'text-white'>DELETE &#9747;</a>
+										</div>
+									</div>");
+								$curr++;
+								$counter++;
+							}
+							
+							echo("</div>");
 							$counter++;
-						}
-						echo('</div>');
-						$counter = 1;
-
 						}
 					?>
 				</div>

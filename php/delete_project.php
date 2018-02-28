@@ -20,6 +20,18 @@ if($ok == true && isset($_GET["id"])){
 			}
 			$del_sql->close();
 		}
+		$query = "SELECT url FROM project_pictures WHERE project_id = ?";//deletes pictures associated to this project from project_pictures folder
+		if($delete_pics = $conn->prepare($query)){
+			$delete_pics->bind_param("i",$del_id);
+			if($delete_pics->execute()){
+				$delete_pics->store_result();
+				$delete_pics->bind_result($del_url);
+				while($delete_pics->fetch()){
+					unlink("../" . $del_url);
+				}
+			}
+			$delete_pics->close();
+		}
 		$query = "DELETE FROM project_pictures WHERE project_id = ?"; // deletes all urls that are connected to this projects with del id
 		if($pic_sql = $conn->prepare($query)){
 			$pic_sql->bind_param("i",$del_id);
@@ -29,7 +41,7 @@ if($ok == true && isset($_GET["id"])){
 			$pic_sql->close();
 		}
 		if($first == true && $secon = true){
-			$message = "Your project was deleted! We are sorry to hear this :( <br> Be sure to keep up your work and creativity and maybe one day post your idea here on our website!";
+			$message = "Your project was deleted! We are sorry to hear this :( <br> Be sure to keep up your work and creativity and maybe one day post your idea again here on our website!";
 		}
 		else{
 			$message = "Error. Something went wrong :(";
@@ -54,6 +66,8 @@ else{
 		<link rel = "stylesheet" href = "../css/bootstrap.css">
 		<!-- CSS -->
 		<link rel = "stylesheet" href = "../css/general.css">
+		<!-- JAVASCRIPT -->
+		<script src = "../js/go_back_browser.js"></script>
 		<!-- FONTS -->
 		<link href="https://fonts.googleapis.com/css?family=Oswald|Raleway" rel="stylesheet">
 		<link rel = "stylesheet" href = "../css/fonts.css">
@@ -62,6 +76,7 @@ else{
 		<div class = "container">
 			<h2 align="center"><?php echo $message ?></h2>
 			<hr class = "hr-black">
+			<p id = "go_back_history" align="center">Go back</p>
 		</div>
 	</body>
 </html>

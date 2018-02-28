@@ -127,6 +127,12 @@ input{
 	text-decoration: underline;
 	cursor: pointer;
 }
+/*history go back button*/
+#go_back_history:hover{
+	cursor: pointer;
+	text-decoration: underline;
+	color:#5993E5;
+}
 /*SCROLLBAR JUST FOR CHROME*/
 /* width */
 ::-webkit-scrollbar {

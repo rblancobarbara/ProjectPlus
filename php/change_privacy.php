@@ -60,6 +60,8 @@ else{
 		<link rel = "stylesheet" href = "../css/bootstrap.css">
 		<!-- CSS -->
 		<link rel = "stylesheet" href = "../css/general.css">
+		<!-- JAVASCRIPT -->
+		<script src = "../js/go_back_browser.js"></script>
 		<!-- FONTS -->
 		<link href="https://fonts.googleapis.com/css?family=Oswald|Raleway" rel="stylesheet">
 		<link rel = "stylesheet" href = "../css/fonts.css">
@@ -68,6 +70,7 @@ else{
 		<div class = "container">
 			<h2 align="center"><?php echo $message ?></h2>
 			<hr class = "hr-black">
+			<p id = "go_back_history" align="center">Go back</p>
 		</div>
 	</body>
 </html>
