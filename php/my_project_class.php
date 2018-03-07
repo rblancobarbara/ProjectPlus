@@ -40,6 +40,9 @@ class Project{
 			$sql->close();
 		}
 		$conn->close();
+		if(count($result_array) == 0){
+			$result_array[0] = "website_pictures/no-image.jpg";
+		}
 		$status_tag = "";
 		if($this->status == "Not verified" || $this->status == "Declined"){
 			$status_tag = "<p id = 'status-text' class = 'text-red'>" . $this->status . "</p>";
@@ -66,6 +69,7 @@ class Project{
 				<hr class = "hr-black">
 				<div class = "row">
 					<div class = "col-md-6">
+
 						<div id="carouselExampleIndicators' . $this->id . '" class="carousel slide" data-ride="carousel">
 						<div class="carousel-inner" role="listbox">');
 								echo('<div class="carousel-item active">
@@ -76,7 +80,7 @@ class Project{
 										<img class="d-block img-fluid" src="../' . $result_array[$i] .'" alt="First slide">
 									</div>');
 							}
-						echo('</div>');
+						echo('</div> <!-- closes carousel-inner -->');
 						if(count($result_array) > 1){
 							echo('<a class="carousel-control-prev" href="#carouselExampleIndicators' . $this->id . '" role="button" data-slide="prev">
 									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -87,16 +91,17 @@ class Project{
 									<span class="sr-only">Next</span>
 								</a>');
 						}
-					echo('</div>
-					</div>
+
+					echo('</div> <!-- closes carousel -->
+					</div> <!-- closes col-md-6 -->
 					<div class = "col-md-6">
 						<h2 align = "left">' . $this->name . '</h2>
 						<p id = "price">Price: ' . $this->min_price . '&euro;</p>
 						<p align = "right" id = "likes">' . $this->likes . ' <span class = "text-red">&#9825;</span></p><br>
 						Status:' . $status_tag . '<br>
 						</div>
-				</div>
-			</div>');
+				</div> <!-- closes row -->
+			</div> <!-- closes container -->');
 	}
 }
 
