@@ -16,7 +16,7 @@ session_destroy();
 		<!-- CSS -->
 		<link rel = "stylesheet" href = "../css/signup_login.css">
 		<!-- FONTS -->
-		<link href="https://fonts.googleapis.com/css?family=Oswald|Raleway" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Oswald|Raleway:500" rel="stylesheet">
 		<link rel = "stylesheet" href = "../css/fonts.css">
 	</head>
 	<body class = "font-raleway">

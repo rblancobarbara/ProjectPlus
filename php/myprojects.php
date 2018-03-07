@@ -26,7 +26,7 @@ if($ok == false){
 		<link rel = "stylesheet" href = "../css/myprojects.css">
 		<link rel = "stylesheet" href = "../css/project_cards.css">
 		<!-- FONTS -->
-		<link href="https://fonts.googleapis.com/css?family=Oswald|Raleway" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Oswald|Raleway:500" rel="stylesheet">
 		<link rel = "stylesheet" href = "../css/fonts.css">
 		<!-- FONT AWESOME ICONS -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

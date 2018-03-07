@@ -67,7 +67,7 @@ else{
 		<link rel = "stylesheet" href = "../css/edit_project.css">
 		<link rel = "stylesheet" href = "../css/general.css">
 		<!-- FONTS -->
-		<link href="https://fonts.googleapis.com/css?family=Oswald|Raleway" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Oswald|Raleway:500" rel="stylesheet">
 		<link rel = "stylesheet" href = "../css/fonts.css">
 	</head>
 	<body class = "font-raleway">
@@ -75,9 +75,9 @@ else{
 		
 		<div class = "container" id = "edit-div">
 			<hr class = "hr-black">
-			<form action = "edit_project_backend.php" method = "POST" enctype="multipart/form-data" name="formUploadFile">
+			<form action = "edit_project_backend.php?project_id=<?= $id ?>" method = "POST" enctype="multipart/form-data" name="formUploadFile">
 				<input name="name" type = "text" placeholder="Project name" class = "form-control" value = "<?php echo $title ?>"><br>
-				<textarea name="description" class =  "form-control" placeholder="Project description" rows="7"><?php echo $description ?></textarea><br>
+				<textarea name="description" class =  "form-control" placeholder="Project description" rows="4"><?php echo $description ?></textarea><br>
 				<input name="price" type = "number" min = 1 placeholder="Min. project price" class = "form-control" value = "<?php echo $price ?>"><br>
 				<select name="category" class = "form-control">
 					<option value = "Awearness" <?= $category == "Awearness" ? "selected" : "" ?>>Awearness</option>
@@ -117,7 +117,7 @@ else{
 				</div>
 				<br>
 				<div id = "button-center-div">
-					<button type = "submit" class = "btn-item-blue" id = "submit-btn">Submit your idea!</button>
+					<button type = "submit" class = "btn-item-blue" id = "submit-btn">Update your idea!</button>
 				</div>
 			</form>
 		</div>

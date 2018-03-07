@@ -14,7 +14,7 @@
 		<link rel = "stylesheet" href = "css/index.css">
 		<link rel = "stylesheet" href = "css/general.css">
 		<!-- FONTS -->
-		<link href="https://fonts.googleapis.com/css?family=Oswald|Raleway" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Oswald|Raleway:500" rel="stylesheet">
 		<link rel = "stylesheet" href = "css/fonts.css">
 
 	</head>

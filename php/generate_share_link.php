@@ -27,10 +27,10 @@ else{
 		<!-- CSS -->
 		<link rel = "stylesheet" href = "../css/general.css">
 		<!-- FONTS -->
-		<link href="https://fonts.googleapis.com/css?family=Oswald|Raleway" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Oswald|Raleway:500" rel="stylesheet">
 		<link rel = "stylesheet" href = "../css/fonts.css">
 	</head>
-	<body class = "background-white font-raleway">
+	<body class = "background-white font-Raleway">
 		<div class = "container">
 			<h2 align="center">Your share link is ready</h2>
 			<hr class = "hr-black">
