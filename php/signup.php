@@ -6,7 +6,7 @@
 		<script src = "../js/bootstrap.js"></script>
 		<link rel = "stylesheet" href = "../css/bootstrap.css">
 		<!-- JAVASCRIPT -->
-
+		<script src = "/project+/js/signup.js"></script>
 		<!-- CSS -->
 		<link rel = "stylesheet" href = "../css/signup_login.css">
 		<!-- FONTS -->
@@ -25,6 +25,9 @@
 				<form action = "create_account.php" method = "POST" enctype="multipart/form-data">
 					<label>Choose profile picture:</label>
 					<input type="file" name="fileToUpload" id="fileToUpload"><br><br>
+					<div id = "profile_pic_holder">
+						<img class = "d-block img-fluid" src = "/project+/website_pictures/default_profile.jpg" id = "profile_preview">
+					</div>
 					<input name = "first_name" id = "f_name" type = "text" class = "form-control " placeholder="First name"><br><br>
 					<input name = "last_name" id = "l_name" type = "text" class = "form-control " placeholder="Last name"><br><br>
 					<input name = "email" id = "e_mail" type = "text" class = "form-control " placeholder="Email"><br><br>
