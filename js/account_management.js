@@ -54,7 +54,7 @@ $(document).ready(function(){
 		var curr_pass = $("#curr_pass").val();
 		var new_pass  = $("#new_pass").val();
 		var new_pass_repeat = $("#new_pass_repeat").val();
-		if(new_pass == new_pass_repeat && new_pass.length >= 8 && hasNumber(new_pass) == true){
+		if(curr_pass.length > 0 && new_pass == new_pass_repeat && new_pass.length >= 8 && hasNumber(new_pass) == true){
 			$.post("change_pass.php",
 			{
 				old_pass: curr_pass,
@@ -70,21 +70,28 @@ $(document).ready(function(){
 			);
 		}
 		else{
+			var error_message = "";
+			if(curr_pass.length == 0){
+				$("#curr_pass").css("background-color","#E5343A");
+				$("#curr_pass_repeat").css("background-color","#E5343A");
+				error_message += ("Passwords do not match\n");
+			}
 			if(new_pass != new_pass_repeat){
 				$("#new_pass").css("background-color","#E5343A");
 				$("#new_pass_repeat").css("background-color","#E5343A");
-				alert("Passwords do not match");
+				error_message += ("Passwords do not match\n");
 			}
 			if(new_pass.length < 8){
 				$("#new_pass").css("background-color","#E5343A");
 				$("#new_pass_repeat").css("background-color","#E5343A");
-				alert("Password is too shot. Must be 8 characters or greater.");
+				error_message += ("Password is too shot. Must be 8 characters or greater\n");
 			}
 			if(hasNumber(new_pass) == false){
 				$("#new_pass").css("background-color","#E5343A");
 				$("#new_pass_repeat").css("background-color","#E5343A");
-				alert("Password must contain at least 1 number.");
+				error_message += ("Password must contain at least 1 number\n");
 			}
+			alert(error_message);
 		}
 	});
 });
