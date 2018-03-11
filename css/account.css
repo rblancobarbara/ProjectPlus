@@ -4,15 +4,46 @@ button{
 	font-size: 20px;
 	border-radius: 50px;
 	border:none;
-	padding:20px;
+	padding:17px;
 	transition: background-color, 1s;
 }
 button:hover{
 	cursor: pointer;
 	background-color: #4286E5;
 }
+.button-danger{
+	color:white;
+	background-color: #E5343A;
+	font-size: 20px;
+	border-radius: 0px;
+	border:none;
+	padding:17px;
+	transition: background-color, 1s;
+	width: 100%;
+}
+.button-danger:hover{
+	cursor: pointer;
+	background-color: #bc292e;
+}
+#profile-pic-holder{
+	min-width: 250px;
+	min-height: 250px;
+	width: 100%;
+	margin-bottom: 25px;
+}
+#profile-pic-holder img{
+	display: block; /*for the img inside your div */ 
+	margin: 0 auto 
+}
 #button-div{
 	text-align: center;
+}
+#profile_preview{
+	border-radius: 50%;
+}
+#delete-acc-div{
+	border: 5px solid #E5343A;
+	padding: 25px 25px;
 }
 input{
 	margin-bottom: 25px;

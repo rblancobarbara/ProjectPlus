@@ -41,7 +41,8 @@ $(document).ready(function(){
 	});
 	$.get("get_account_info.php",function(data,status){ //gets acc info
 		var vardata = data;
-		var info_array = vardata.split(",",4);
+		alert(vardata);
+		var info_array = vardata.split(",",5);
 		f_name = info_array[0];
 		l_name = info_array[1];
 		e_mail = info_array[2];

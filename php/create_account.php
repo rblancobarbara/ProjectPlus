@@ -31,19 +31,19 @@ if(isset($_POST["first_name"]) && isset($_POST["last_name"]) && isset($_POST["em
 	}
 	if(ContainsNumbers($first_name)){
 		$pass = false;
-		$message .= "First name contains numbers.\r\n";
+		$message .= "First name contains numbers.\n";
 	}
 	if(ContainsNumbers($last_name)){
 		$pass = false;
-		$message .= "Last name contains numbers.\r\n";
+		$message .= "Last name contains numbers.\n";
 	}
 	if(CheckEmail($email) == false){
 		$pass = false;
-		$message .= "Email is invalid.\r\n";
+		$message .= "Email is invalid.\n";
 	}
 	if(strlen($username) > 16){
 		$pass = false;
-		$message .= "Username must be less then 16 characters long.\r\n";
+		$message .= "Username must be less then 16 characters long.\n";
 	}
 	if(strlen($password) < 8 || ContainsNumbers($password) == false){
 		$pass = false;
@@ -51,7 +51,7 @@ if(isset($_POST["first_name"]) && isset($_POST["last_name"]) && isset($_POST["em
 	}
 	if($password_repeat != $password){
 		$pass = false;
-		$message .= "Passwords must match.\r\n";
+		$message .= "Passwords must match.\n";
 	}
 	// checking end
 	if($pass && $uploadOk == 1){
@@ -82,7 +82,8 @@ if(isset($_POST["first_name"]) && isset($_POST["last_name"]) && isset($_POST["em
 			{
 				$query = "INSERT INTO profile_pictures(account_id,url) VALUES(?,?)";
 				if($sql = $conn->prepare($query)){
-					$sql->bind_param("is",$insert_id,$target_dir . basename( $_FILES["fileToUpload"]["name"]),$target_dir . $insert_id . "." . $imageFileType);
+					$par3 = $target_dir . $insert_id . "." . $imageFileType;
+					$sql->bind_param("is",$insert_id,$par3);
 					$sql->execute();
 					$sql->close();
 				}
@@ -96,7 +97,7 @@ if(isset($_POST["first_name"]) && isset($_POST["last_name"]) && isset($_POST["em
 	}
 }
 else{
-	$message .= "Something is empty in the form\n"; // something is empty
+	$message = "Something is empty in the form\n"; // something is empty
 }
 function CheckEmail($email){
 	//strpos vraca false ako ne nadje needle u haystacku, a vraca poziciju needla ako nadje

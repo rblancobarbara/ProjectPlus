@@ -5,6 +5,7 @@ button:hover{
 body{
 	margin:0;
 	margin-top: 150px;
+	overflow-x: hidden;
 }
 select{
 	color:black !important;

@@ -8,11 +8,14 @@
 		<!-- NAVIGATION -->
 		<script src = "js/main_navigation.js"></script>
 		<link rel = "stylesheet" href = "css/index_navigation.css">
-		<!-- JAVASCRIPT -->	
-		<script src = "js/fullscreen_div.js"></script>
 		<!-- CSS -->
 		<link rel = "stylesheet" href = "css/index.css">
 		<link rel = "stylesheet" href = "css/general.css">
+		<link rel = "stylesheet" href = "css/animate.css">
+		<!-- JAVASCRIPT -->	
+		<script src = "js/fullscreen_div.js"></script>
+		<script src = "js/index_anim.js"></script>
+		<script src = "js/typed.js"></script>
 		<!-- FONTS -->
 		<link href="https://fonts.googleapis.com/css?family=Oswald|Raleway:500" rel="stylesheet">
 		<link rel = "stylesheet" href = "css/fonts.css">
@@ -41,28 +44,29 @@
 			</ul>
 		</div>
 		<div id = "header-div" class = "container">
-				<h1 align = "center">THINK. CREATE. SHARE.</h1><hr class= "hr-black">
+				<h1 id = "tcs" align = "center"> <span id = "typed"></span></h1>
+				<hr class= "hr-black">
 					<div class = "row">
 						<div class= "col-md-12 image-holder">
 							<img src = "website_pictures/world.png">
 						</div>
 					</div>
 				<hr class= "hr-black">
-				<h1 align = "center">THE PLACE WHERE IDEAS COME <span id = "true">TRUE</span></h1>
+				<h1 id = "tpwict" align = "center">THE PLACE WHERE IDEAS COME <span id = "true">TRUE</span></h1>
 		</div>
 		<div id = "about-section-div">
 			<br>
 			<div class = "container">
 				<div class = "row">
-					<div class = "col-md-4">
+					<div class = "col-md-4 step">
 						<h3 align = "center">Think</h3><hr class = "hr-white">
 						<p align = "center">Think of an idea that may change your life!</p>
 					</div>
-					<div class = "col-md-4">
+					<div class = "col-md-4 step">
 						<h3 align = "center">Create</h3><hr class = "hr-white">
 						<p align = "center">Be creative and invest in your idea, give life to your ideas!</p>
 					</div>
-					<div class = "col-md-4">
+					<div class = "col-md-4 step">
 						<h3 align = "center">Share</h3><hr class = "hr-white">
 						<p align = "center">Share your idea with us, collaborate with other brilliant minds and make your idea go successful!</p>
 					</div>
@@ -100,7 +104,7 @@
 		<div id = "dev-team-div">
 			<h1 id = "our-team-h" align="center">OUR TEAM:</h1>
 			<div class = "container">
-				<div class = "row">
+				<div class = "row team-memeber-even">
 					<div class = "col-md-4 profile-pic-holder">
 						<img class = "profile-pic" src = "website_pictures/robajac2.jpg">
 						<p>Luka Robajac</p>
@@ -112,7 +116,7 @@
 					</div>
 				</div>
 				<hr class = "hr-black">
-				<div class = "row">
+				<div class = "row team-memeber-odd">
 					<div class = "col-md-4 profile-pic-holder">
 						<img class = "profile-pic" src = "website_pictures/matija.png">
 						<p>Matija Vukajlovic</p>

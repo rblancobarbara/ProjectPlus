@@ -12,7 +12,7 @@ if($sql = $conn->prepare($query)){
 		echo "Created";
 	}
 	else{
-		echo "Error: " $conn->error;
+		echo "Error: " . $conn->error;
 	}
 }
 $conn->close();

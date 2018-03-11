@@ -6,6 +6,47 @@ $ok = Check();
 if($ok == false){
 	exit("Invalid login");
 }
+else{
+	// vars
+	$f_name = "";
+	$l_name = "";
+	$e_mail = "";
+	$username = "";
+	$profile_url = "";
+	// end vars
+	$id = $_SESSION["user_id"];
+	$conn = new mysqli("localhost","root","","projectplus");
+	$query = "SELECT * FROM accounts WHERE id = ?";
+	$string = "";
+	if($sql = $conn->prepare($query)){
+		$sql->bind_param("i",$id);
+		if($sql->execute()){
+			$result = $sql->get_result();
+			while($row = $result->fetch_assoc()){
+				//f_name,l_name,e_mail,username
+				$f_name = $row["f_name"];
+				$l_name = $row["l_name"];
+				$e_mail = $row["e_mail"];
+				$username = $row["username"];
+				$sql->free_result();
+			}
+		}
+		$sql->close();
+	}
+	$query = "SELECT url FROM profile_pictures WHERE account_id = ?";
+	if($sql = $conn->prepare($query)){
+		$sql->bind_param("i",$id);
+		if($sql->execute()){
+			$sql->store_result();
+			$sql->bind_result($got_url);
+			$sql->fetch();
+			$profile_url = $got_url;
+			$sql->free_result();
+		}
+		$sql->close();
+	}
+	$conn->close();
+}
 
 ?>
 <html>
@@ -60,28 +101,59 @@ if($ok == false){
 			</ul>
 		</div>
 		<div id = "main">
-			<label for = "full_name">Full Name <i class = "fa fa-id-card"></i></label>
-			<input id = "full_name" type = "text" class = "form-control ">
-			<label for = "e_mail">Email <i class = "fa fa-envelope"></i></label>
-			<input id = "e_mail" type = "email" class = "form-control ">
-			<label for = "username">Username <i class = "fa fa-user"></i></label>
-			<input id = "username" type = "text" class = "form-control ">
-			<div id = "button-div">
-				<button id = "save-btn" type = "button">Save changes</button>
-			</div>
 			<div class = "container">
+				<div class = "row">
+					<div class = "col-md-6" id = "profile-pic-holder">
+						<?php
+
+							if($profile_url == "undefined"){
+								echo('<img alt = "Error loading a picture" width="250px" height="250px" class = "d-block img-fluid" src = "/project+/website_pictures/default_profile.jpg" id = "profile_preview">');
+							}
+							else{
+								echo('<img alt = "Error loading a picture" width="250px" height="250px" class = "d-block img-fluid" src = "' . $profile_url . '" id = "profile_preview">');
+							}
+
+						?>
+					</div>
+					<div class = "col-md-6">
+						<button type = "button">Change picture</button>
+						<br>
+						<br>
+						<button type = "button">Delete picture</button>
+					</div> 
+				</div>
 				<hr class = "hr-black">
 			</div>
-			<h1 align="center" class = "text-black ">Change password <i class = "fa fa-unlock-alt"></i></h1><br>
-			<input id = "curr_pass" type = "password" placeholder = "Current password" class = " form-control"><br>
-			<input id = "new_pass" type = "password" placeholder = "New password" class = " form-control"><br>
-			<input id = "new_pass_repeat" type = "password" placeholder = "New password repeat" class = " form-control">
-			<div id = "button-div">
-				<button id = "change-pass-btn" type = "button">Change password</button>
-			</div>
 			<div class = "container">
+				<!-- acc -->
+				<label for = "full_name">Full Name <i class = "fa fa-id-card"></i></label>
+				<input value = "<?= $f_name . " " . $l_name ?>" id = "full_name" type = "text" class = "form-control ">
+				<label for = "e_mail">Email <i class = "fa fa-envelope"></i></label>
+				<input value = "<?= $e_mail ?>" id = "e_mail" type = "email" class = "form-control ">
+				<label for = "username">Username <i class = "fa fa-user"></i></label>
+				<input value = "<?= $username ?>" id = "username" type = "text" class = "form-control ">
+				<div id = "button-div">
+					<button id = "save-btn" type = "button">Save changes</button>
+				</div>
 				<hr class = "hr-black">
+				<!-- change pass -->
+				<h1 align="center" class = "text-black ">Change password <i class = "fa fa-unlock-alt"></i></h1><br>
+				<input id = "curr_pass" type = "password" placeholder = "Current password" class = " form-control"><br>
+				<input id = "new_pass" type = "password" placeholder = "New password" class = " form-control"><br>
+				<input id = "new_pass_repeat" type = "password" placeholder = "New password repeat" class = " form-control">
+				<div id = "button-div">
+					<button id = "change-pass-btn" type = "button">Change password</button>
+				</div>
+				<hr class = "hr-black">
+				<!-- delete acc -->
+				<div id = "delete-acc-div">
+					<p>Be aware, clicking on the button below, you are awaare that your account along with ALL your projects, bids and messages will be deleted <span class = "text-red">PERMANENTLY</span>.</p>
+					<br>
+					<button class = "button-danger" type = "button">DELETE ACCOUNT</button>
+				</div>
 			</div>
+			
+			
 		</div>
 	</body>
 </html>
