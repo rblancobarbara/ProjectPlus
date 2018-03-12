@@ -20,14 +20,16 @@ if(isset($_POST["first_name"]) && isset($_POST["last_name"]) && isset($_POST["em
 	    if($check !== false) {
 	        $uploadOk = 1;
 	    } else {
-	        echo "File is not an image.";
+	        $message .= "File is not an immage.\n";
 	        $uploadOk = 0;
 	    }
 	}
-    // Check file size
-	if ($_FILES["fileToUpload"]["size"] > 5000000) {
-	    echo "Sorry, your file is too large.";
-	    $uploadOk = 0;
+	if($uploadOk == 1){
+	    // Check file size
+		if ($_FILES["fileToUpload"]["size"] > 5000000) {
+		    $message .= "Sorry, your file is too large.\n";
+		    $uploadOk = 0;
+		}
 	}
 	if(ContainsNumbers($first_name)){
 		$pass = false;

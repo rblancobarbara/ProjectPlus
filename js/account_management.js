@@ -15,6 +15,7 @@ $(document).ready(function(){
 			$("#save-btn").css("background-color","grey");
 		}
 	});
+	// save acc changes
 	$("#save-btn").click(function(){
 		var full_name = $("#full_name").val().split(" ");
 		var f_name_new = full_name[0];
@@ -38,18 +39,6 @@ $(document).ready(function(){
 					alert("Something went wrong, please try again later! Thank you!");
 				}
 			});
-	});
-	$.get("get_account_info.php",function(data,status){ //gets acc info
-		var vardata = data;
-		alert(vardata);
-		var info_array = vardata.split(",",5);
-		f_name = info_array[0];
-		l_name = info_array[1];
-		e_mail = info_array[2];
-		username = info_array[3];
-		$("#full_name").val(f_name + " " + l_name);
-		$("#e_mail").val(e_mail);
-		$("#username").val(username);
 	});
 	$("#change-pass-btn").click(function(){ // change pass
 		var curr_pass = $("#curr_pass").val();
@@ -94,6 +83,45 @@ $(document).ready(function(){
 			}
 			alert(error_message);
 		}
+	});
+	// show warning div
+	// BRINGING FULLSCREEN DIV TO THE FRONT
+	$("#del-acc").click(function(){
+		$("body").css("overflow","hidden");
+		$("#warning-div-wrapper").fadeTo("fast",1,function(){
+			$("#warning-div-wrapper").css("z-index","99");
+		});
+	});
+	// SENDING FULLSCREEN DIV TO THE BACK
+	$("#close-warning").click(function(){
+		$("body").css("overflow","auto");
+		$("#warning-div-wrapper").fadeTo("fast",0,function(){
+			$("#warning-div-wrapper").css("z-index","-1");
+		});
+	});
+	// ajax to delete acc
+	$("#del-acc-perm").click(function(){
+		$.ajax({
+			url: "delete_acc.php",
+			type: "POST",
+			success: function(data){
+				// full success
+				if(data == 1){
+					$("#back-info-del").html("Account now deleted, logging out...");
+				}
+				// partial pass
+				if(data == 2){
+					$("#back-info-del").html("Account deleted, but some pictures are still here! Nevermind, we will clean this up for you...");
+				}
+				// error
+				if(data == -1){
+					$("#back-info-del").removeClass("text-green");
+					$("#back-info-del").addClass("text-red");
+					$("#back-info-del").html("There was an error, try again later!");
+				}
+				alert(data);
+			}
+		});
 	});
 });
 function hasNumber(string) {

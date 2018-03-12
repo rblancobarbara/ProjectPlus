@@ -45,6 +45,28 @@ button:hover{
 	border: 5px solid #E5343A;
 	padding: 25px 25px;
 }
+#warning-div-wrapper{
+	background-color: rgba(0,0,0,0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+#warning-div{
+	margin-top: 150px;
+	padding: 25px;
+	background-color: white;
+	border-radius: 25px;
+}
+#close-warning{
+	float: right;
+}
+#close-warning:hover{
+	cursor: pointer;
+	text-decoration: underline;
+}
 input{
 	margin-bottom: 25px;
 }

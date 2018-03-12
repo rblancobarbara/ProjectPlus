@@ -149,11 +149,20 @@ else{
 				<div id = "delete-acc-div">
 					<p>Be aware, clicking on the button below, you are awaare that your account along with ALL your projects, bids and messages will be deleted <span class = "text-red">PERMANENTLY</span>.</p>
 					<br>
-					<button class = "button-danger" type = "button">DELETE ACCOUNT</button>
+					<button id = "del-acc" class = "button-danger" type = "button">DELETE ACCOUNT</button>
 				</div>
 			</div>
-			
-			
+		</div>
+		<!-- warning div -->
+		<div id = "warning-div-wrapper">
+			<div class = "container" id = "warning-div">
+				<h3 align="center" class = "text-red">WARNING!<span id = "close-warning">CLOSE</span></h3>
+				<p>You are now one click away from totally deleting your account!<br>With this, you are aware that you will be deleting all of your info from our database, all of your projects and your bids!<br>If you are absolutely sure you want to do this, proceed.</p>
+				<hr class = "hr-black">
+				<button id = "del-acc-perm" class = "button-danger" type = "button">Nevermind, I want to do it anyway</button>
+				<br>
+				<label id = "back-info-del" class = "text-green"></label>
+			</div>
 		</div>
 	</body>
 </html>
