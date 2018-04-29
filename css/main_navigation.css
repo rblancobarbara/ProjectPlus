@@ -1,16 +1,18 @@
 #nav-list{
 	border-radius:75px;
-	z-index: 100;
 	box-shadow: 0px 0px 10px black;
-	margin:0;
+	margin-top:10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 25px;
 	padding: 0;
-	overflow:hidden;
 	background-color: #5993E5;
 	list-style-type: none;
-	position: fixed;
+}
+#navbar-container{
+	position: sticky;
+	z-index: 1;
 	top: 10px;
-	left: 10px;
-	right: 10px;
 }
 /*active klasa je za kad se korisnik uloguje pa na dalje*/
 .active{
@@ -49,6 +51,11 @@ a.nav-link{
 	color:white;
 	text-decoration: none;
 	font-size:20px;
+	
+	-webkit-transition: background-color, 0.3s;
+	-webkit-transform: color, 0.3s;
+	transition: background-color, 0.3s;
+	transform: color, 0.3s;
 }
 a.nav-link:hover{
 	background-color: white;

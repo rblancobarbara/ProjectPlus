@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require("my_project_class.php");
+require("../classes/my_project_class.php");
 require_once("check_session.php");
 $ok = Check();
 if($ok == true){

@@ -19,6 +19,10 @@
 				<a href = "/project+/index.php"><img id = "logo" src = "/project+/website_pictures/logo.png"></a>
 			</div>
 			<hr>
+			<div id = "other-div">
+				<a href = "../index.php" class = "a-link ">< Go to home page</a><br>
+				<a href = "login.php" class = "a-link ">< Go to log in page</a>
+			</div>
 			<br>
 			<div id = "form-div">
 				<h1 align="center">PASSWORD RESET - TICKET SUBMISSION</h1><br>
@@ -29,12 +33,6 @@
 						Issue ticket
 					</button>
 				</form>
-			</div>
-			<br>
-			<hr>
-			<div id = "other-div">
-				<a href = "../index.php" class = "a-link ">< Go to home page</a><br>
-				<a href = "login.php" class = "a-link ">< Go to log in page</a>
 			</div>
 		</div>
 	</body>

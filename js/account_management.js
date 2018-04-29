@@ -22,7 +22,7 @@ $(document).ready(function(){
 		var l_name_new = full_name[1];
 		var e_mail_new = $("#e_mail").val();
 		var username_new = $("#username").val();
-		$.post("save_acc_changes.php",
+		$.post("scripts/save_acc_changes.php",
 			{
 				f_name: f_name_new,
 				l_name: l_name_new,
@@ -45,7 +45,7 @@ $(document).ready(function(){
 		var new_pass  = $("#new_pass").val();
 		var new_pass_repeat = $("#new_pass_repeat").val();
 		if(curr_pass.length > 0 && new_pass == new_pass_repeat && new_pass.length >= 8 && hasNumber(new_pass) == true){
-			$.post("change_pass.php",
+			$.post("scripts/change_pass.php",
 			{
 				old_pass: curr_pass,
 				new_pass: new_pass

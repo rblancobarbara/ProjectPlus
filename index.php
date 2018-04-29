@@ -1,13 +1,14 @@
 <html>
 	<head>
 		<title>Project+ - Index</title>
-		<!-- BOOTSTRAP4 -->
+		<!-- jquery -->
 		<script src = "js/jquery.js"></script>
+		<!-- BOOTSTRAP4 -->
 		<script src = "js/bootstrap.js"></script>
 		<link rel = "stylesheet" href = "css/bootstrap.css">
 		<!-- NAVIGATION -->
 		<script src = "js/main_navigation.js"></script>
-		<link rel = "stylesheet" href = "css/index_navigation.css">
+		<link rel = "stylesheet" href = "css/main_navigation.css">
 		<!-- CSS -->
 		<link rel = "stylesheet" href = "css/index.css">
 		<link rel = "stylesheet" href = "css/general.css">
@@ -22,7 +23,7 @@
 
 	</head>
 	<body class="font-raleway">
-		<nav>
+		<!-- computer navigation -->
 			<div id = "navbar-container">
 				<ul id = "nav-list">
 					<li class = "nav-item-logo"><img id = "logo" src = "website_pictures/logo-white.png"></li>
@@ -35,7 +36,7 @@
 					</li>
 				</ul>
 			</div>
-		</nav>
+		<!-- responsive navigation -->
 		<div id = "sliding-menu">
 			<ul id = "sliding-menu-list">
 				<li class = "sliding-menu-logo"><img id = "slide-logo" src = "website_pictures/logo.png"></li>
@@ -108,24 +109,11 @@
 					<div class = "col-md-4 profile-pic-holder">
 						<img class = "profile-pic" src = "website_pictures/robajac2.jpg">
 						<p>Luka Robajac</p>
-						<address>Age 17, lives in Nis</address>
 						<p class = " career-text">Web developer and designer</p>
 					</div>
 					<div class = "col-md-8">
 						<p align="center">This is our main web developer and designer! (more description to come, this is just a placeholder)</p>
 					</div>
-				</div>
-				<hr class = "hr-black">
-				<div class = "row team-memeber-odd">
-					<div class = "col-md-4 profile-pic-holder">
-						<img class = "profile-pic" src = "website_pictures/matija.png">
-						<p>Matija Vukajlovic</p>
-						<address>Age 17, lives in Nis</address>
-						<p class = " career-text">Advisor</p>
-					</div>
-					<dic class = "col-md-8 profile-pic-holder">
-						<p align = "center">This is our picture advisor! (more description to come, this is just a placeholder)</p>
-					</dic>
 				</div>	
 			</div>
 			<div id = "join-btn-div">
@@ -158,7 +146,6 @@
 			</div>
 			<br>
 			<p align="center" class ="text-white "><span class = "title">Developed by:</span> Luka Robajac</p>
-			<p align="center" class = "text-white "><span class = "title">Designed by:</span> Luka Robajac, Matija Vukajlovic</p>
 			<p align="center" class = "text-white ">And huge thanks to others who collaborated with us to make this website alive!</p><hr class = "hr-white">
 			<p align="center" class = "text-white ">Project+ Team &#169;</p>
 		</div>

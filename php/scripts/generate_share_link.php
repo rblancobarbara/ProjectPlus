@@ -17,18 +17,18 @@ else{
 <html>
 	<head>
 		<!-- BOOTSTRAP4 -->
-		<script src = "../js/jquery.js"></script>	
-		<script src = "../js/bootstrap.js"></script>
-		<link rel = "stylesheet" href = "../css/bootstrap.css">
+		<script src = "../../js/jquery.js"></script>	
+		<script src = "../../js/bootstrap.js"></script>
+		<link rel = "stylesheet" href = "../../css/bootstrap.css">
 		<!-- JAVASCRIPT -->
-		<script src = "../js/twitter_for_website.js"></script>
-		<script src = "../js/facebook_sdk.js"></script>
-		<script src = "../js/go_back_browser.js"></script>
+		<script src = "../../js/twitter_for_website.js"></script>
+		<script src = "../../js/facebook_sdk.js"></script>
+		<script src = "../../js/go_back_browser.js"></script>
 		<!-- CSS -->
-		<link rel = "stylesheet" href = "../css/general.css">
+		<link rel = "stylesheet" href = "../../css/general.css">
 		<!-- FONTS -->
 		<link href="https://fonts.googleapis.com/css?family=Oswald|Raleway:500" rel="stylesheet">
-		<link rel = "stylesheet" href = "../css/fonts.css">
+		<link rel = "stylesheet" href = "../../css/fonts.css">
 	</head>
 	<body class = "background-white font-Raleway">
 		<div class = "container">

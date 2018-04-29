@@ -1,8 +1,8 @@
 <?php
 
 session_start();
-require_once("check_session.php");
-require_once("check_ownership.php");
+require_once("scripts/check_session.php");
+require_once("scripts/check_ownership.php");
 $ok = Check();
 if($ok == true && isset($_GET["set"]) && isset($_GET["id"])){
 		$set = $_GET["set"]; // what privacy level to set

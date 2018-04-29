@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$("#projects-list").load("load_my_projects.php");
+	$("#projects-list").load("scripts/load_my_projects.php");
 });
 function OpenDropdown(id) {
 	document.getElementById("myDropdown"+id).classList.toggle("show");
